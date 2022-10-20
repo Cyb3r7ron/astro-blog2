@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="መዝናኛ">
+	<main>
+		<h4>ጥያቄ <span class="text-gradient">3</span></h4>
+        <img src="https://images.unsplash.com/photo-1665731372684-1efcb1307d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="Snow" class="responsive" >
+		<p class="instructions">
+			የዚህ ተራራ ስም ማን ይባላል?
+			<sup>3/10 </sup>
+
+		</p>
+
+		<ul role="list" class="link-card-grid">
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ኪሊማንጃሮ</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ባሌ ተራሮች</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ኤቨረስት</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ሂማሊያስ</button>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #FFD700, #da6262);
+
+	}
+    sup{
+		text-align: right;
+		margin-left: 120px;
+		margin-bottom: -20px;
+		color:#fff01b;
+		font-weight: bold;
+	}
+	h4 {
+		margin: 2rem 0;
+		color:aliceblue;
+		text-align: center;
+        font-size: 5;
+
+	}
+    img{
+        margin-left: 150px;
+        width: 55%;
+        border-radius: 10px;
+    }
+    @media only screen and (max-width: 480px) {
+  img {
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+
+     button{
+        height: 80px;
+        width: 200px;
+		font-size: 15px;
+        background-color: #585854;
+		color: white;
+        border-radius: 10px;
+        padding: 5px;
+		margin-left: 60px;
+		transition: all 0.3s ease-in-out;
+    }
+   
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+    p {
+		text-align: right;
+		margin-right: 250px;
+	}
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background:linear-gradient(0deg, #FFD700, #da6262);
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+   
+	.button-shrink:hover {
+  transform: scale(0.8);
+}
+
+
+
+	</style>

@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<Layout title="መዝናኛ">
+	<main>
+		<h4>ጥያቄ <span class="text-gradient">2</span></h4>
+		<p class="instructions">
+			የወንዶች ጉዳይ ላይ አዕምሮ የሶፋውን አጠጋገን ምን ብሎ ነገራቸው ?
+			<sup class= "md:m-4">3/10 </sup>
+		</p>
+		<ul role="list" class="link-card-grid">
+			<input type="text" id="fname" name="fname" value=""> <br>
+            <button onclick="window.location.href='https://w3docs.com';">መልስ ላክ</button>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #FFD700, #da6262);
+		
+	}
+
+	h4 {
+		margin: 2rem 0;
+		color:aliceblue;
+		text-align: center;
+        font-size: 5;
+
+	}
+    input {
+        background-color: #dbd4d4;
+        margin: 1rem 2;
+        border-radius: 25px;
+        padding: 1em 1.3em;
+        font-size: 12;
+		padding-left: 20px;
+		margin-left: initial;
+		width: auto;
+    }
+    button{
+        height: 35px;
+        width: 80px;
+		font-size: 15px;
+        background-color: #FFD700;
+        border-radius: 10px;
+        padding: 2px;
+		margin-left: 130px;
+    }
+    main{
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+    p {
+		text-align: center;
+	}
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background:linear-gradient(0deg, #FFD700, #da6262);
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	
+	@media (min-width: 640px) { input {margin-left:120px;} }
+	@media (min-width: 640px) { input {width:300px;} }
+	@media (min-width: 960px) { button {margin-left:260px;} }
+	@media (min-width: 1100px) { button {margin-left:260px;} }
+</style>

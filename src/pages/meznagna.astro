@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="መዝናኛ">
+	<main>
+		<h4>ጥያቄ <span class="text-gradient">1</span></h4>
+		<p class="instructions">
+			የኦሮማይ ልብ ወለድ ደራሲ ማን ይባላል?
+		</p>
+		<ul role="list" class="link-card-grid">
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ስብሃት ገ/እግዚአብሄር</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ይስማዕከ ወርቁ</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">በዓሉ ግርማ</button>
+			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ዓብይ አህመድ</button>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #FFD700, #da6262);
+
+	}
+
+	h4 {
+		margin: 2rem 0;
+		color:aliceblue;
+		text-align: center;
+        font-size: 5;
+
+	}
+     button{
+        height: 80px;
+        width: 200px;
+		font-size: 15px;
+        background-color: #585854;
+		color: white;
+        border-radius: 10px;
+        padding: 5px;
+		margin-left: 60px;
+		transition: all 0.3s ease-in-out;
+    }
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+    p {
+		text-align: center;
+		font-size: 15px;
+	}
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background:linear-gradient(0deg, #FFD700, #da6262);
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	.button-shrink:hover {
+  transform: scale(0.8);
+}
+	</style>

@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="እንቆቅልሽ">
+	<main>
+		<h2>Welcome to <span class="text-gradient">እንቆቅልሽ</span></h2>
+		<p class="instructions">
+			በአዝናኝ ጥያቄዎቻችን እራሶን ይፈትሹ፤ይዝናኑ፤ይሸለሙ !!!<br />
+			 ካሉት ዘርፎች አንዱን መርጠው ይቀጥሉ 👇
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/meznagna/"
+				title="መዝናኛ"
+				body=" ስለ ፊልሞች ፤ ሙዚቃ ፤ መፅሃፍት ምን ያህል ያውቃሉ?"
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="ታሪክ"
+				body="ስለ ሃገራችን ታሪካዊ ሁነቶች ፤ ቅርሶች ፤ ቦታዎች ፤ ሰዎች ያውቃሉ?"
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="ጠቅላላ ዕውቀት"
+				body="ዓለማችን ላይ ስላሉ ሁነቶችስ?"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="እኔንጃ"
+				body="እዚህ ላይ ምን እንደሚገባ ወስኑ am out of ideas"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #FFD700, #da6262);
+	}
+
+	h2 {
+		margin: 2rem 0;
+		color:aliceblue;
+		text-align: center;
+
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+    p {
+		text-align: center;
+	}
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 0%;
+		}
+		50% {
+			background-position-y: 80%;
+		}
+	}
+
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		background:linear-gradient(0deg, #FFD700, #da6262);
+		padding: 1rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+	}
+
+	.instructions code {
+		font-size: 0.875em;
+		border: 0.1em solid var(--color-border);
+		border-radius: 4px;
+		padding: 0.15em 0.25em;
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
