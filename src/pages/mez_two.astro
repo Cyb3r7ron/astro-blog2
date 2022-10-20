@@ -5,10 +5,9 @@ import Card from '../components/Card.astro';
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <Layout title="መዝናኛ">
 	<main>
-		<h4>ጥያቄ <span class="text-gradient">2</span></h4>
+		<h4>ጥያቄ <span class="text-gradient">2/10</span></h4>
 		<p class="instructions">
 			የወንዶች ጉዳይ ላይ አዕምሮ የሶፋውን አጠጋገን ምን ብሎ ነገራቸው ?
-			<sup class= "md:m-4">3/10 </sup>
 		</p>
 		<ul role="list" class="link-card-grid">
 			<input type="text" id="fname" name="fname" value=""> <br>
@@ -20,15 +19,18 @@ import Card from '../components/Card.astro';
 <style>
 	:root {
 		--astro-gradient: linear-gradient(0deg, #FFD700, #da6262);
-		
 	}
 
 	h4 {
 		margin: 2rem 0;
 		color:aliceblue;
 		text-align: center;
-        font-size: 5;
+        font-size: 8;
 
+	}
+	 sup{
+		color:#fff01b;
+		font-weight: bold;
 	}
     input {
         background-color: #dbd4d4;
@@ -59,6 +61,7 @@ import Card from '../components/Card.astro';
 	}
 	.text-gradient {
 		font-weight: 900;
+		font-size: 12px;
 		background-image: var(--astro-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;

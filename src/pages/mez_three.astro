@@ -5,11 +5,11 @@ import Card from '../components/Card.astro';
 
 <Layout title="መዝናኛ">
 	<main>
-		<h4>ጥያቄ <span class="text-gradient">3</span></h4>
+		<h4>ጥያቄ <span class="text-gradient">3/10</span></h4>
         <img src="https://images.unsplash.com/photo-1665731372684-1efcb1307d5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="Snow" class="responsive" >
 		<p class="instructions">
 			የዚህ ተራራ ስም ማን ይባላል?
-			<sup>3/10 </sup>
+			
 
 		</p>
 
@@ -34,6 +34,7 @@ import Card from '../components/Card.astro';
 		color:#fff01b;
 		font-weight: bold;
 	}
+
 	h4 {
 		margin: 2rem 0;
 		color:aliceblue;
@@ -71,11 +72,12 @@ import Card from '../components/Card.astro';
 		max-width: 60ch;
 	}
     p {
-		text-align: right;
+		text-align: center;
 		margin-right: 250px;
 	}
 	.text-gradient {
 		font-weight: 900;
+		font-size: 12px;
 		background-image: var(--astro-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
