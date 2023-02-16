@@ -10,10 +10,10 @@ import Card from '../components/Card.astro';
 			የኦሮማይ ልብ ወለድ ደራሲ ማን ይባላል?
 		</p>
 		<ul role="list" class="link-card-grid">
-			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ስብሃት ገ/እግዚአብሄር</button>
-			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ይስማዕከ ወርቁ</button>
-			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">በዓሉ ግርማ</button>
-			<button  class="button-shrink" onclick="window.location.href='https://w3docs.com';">ዓብይ አህመድ</button>
+			<button  class="button-shrink" onclick="window.location.href='http://localhost:3000/mez_two';">ስብሃት ገ/እግዚአብሄር</button>
+			<button  class="button-shrink" onclick="window.location.href='http://localhost:3000/mez_three';">ይስማዕከ ወርቁ</button>
+			<button  class="button-shrink" onclick="window.location.href='http://localhost:3000/mez_two';">በዓሉ ግርማ</button>
+			<button  class="button-shrink" onclick="window.location.href='http://localhost:3000/mez_four';">ዓብይ አህመድ</button>
 		</ul>
 	</main>
 </Layout>
@@ -25,42 +25,33 @@ import Card from '../components/Card.astro';
 	}
 
 	h4 {
-		margin: 2rem 0;
-		color:aliceblue;
-		text-align: center;
-        font-size: 5;
+		@apply mx-0 my-8 text-center;
+        color: black;
 
 	}
      button{
-        height: 80px;
-        width: 200px;
-		font-size: 15px;
-        background-color: #585854;
-		color: white;
-        border-radius: 10px;
-        padding: 5px;
-		margin-left: 60px;
-		transition: all 0.3s ease-in-out;
+       @apply h-20 text-sm ml-16 p-1 text-white w-48;
+       background-color: rgb(49, 56, 77);
+       border-radius: 10px;
+       transition: all 0.3s ease-in-out;
     }
 	main {
-		margin: auto;
-		padding: 1em;
+		@apply m-auto p-4;
 		max-width: 60ch;
 	}
     p {
-		text-align: center;
-		font-size: 15px;
+		@apply text-center text-sm;
+		
 	}
 	.text-gradient {
-		font-weight: 900;
-		font-size: 12px;
+		@apply rounded-md font-black text-xs;
+        background-size: 100% 200%;
+        background-position-y: 100%;
+        animation: pulse 4s ease-in-out infinite;
 		background-image: var(--astro-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
+		
 	}
 
 	@keyframes pulse {
@@ -75,25 +66,19 @@ import Card from '../components/Card.astro';
 
 	.instructions {
 		line-height: 1.6;
-		margin: 1rem 0;
+		@apply rounded-md mx-0 my-4 p-4;
 		background:linear-gradient(0deg, #FFD700, #da6262);
-		padding: 1rem;
-		border-radius: 0.4rem;
 		color: var(--color-bg);
 	}
 
 	.instructions code {
-		font-size: 0.875em;
 		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
+		@apply rounded text-sm px-1 py-px;
 	}
 
 	.link-card-grid {
-		display: grid;
+		@apply grid p-0 gap-4;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
 	}
 	.button-shrink:hover {
   transform: scale(0.8);
